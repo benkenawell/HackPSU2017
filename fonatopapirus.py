@@ -20,11 +20,20 @@ def buttonPressed(channel):
 	global lasttxt
 	updateText = ""
 	if(channel == SW[0]):
-		updateText = "Here.  Just knock :)"
+		#updateText = "Here.  Just knock :)"
+		SWfile = open("./SW1msg", 'r')
+		updateText = SWfile.read(40)
+		SWfile.close()
 	elif(channel == SW[1]):
-		updateText = "Away. Be back soon."
+		#updateText = "Away. Be back soon."
+		SWfile = open("./SW2msg", 'r')
+		updateText = SWfile.read(40)
+		SWfile.close()
 	elif(channel == SW[2]):
-		updateText = "SW3"
+		#updateText = "Studying.  Emrgnc only."
+		SWfile = open("./SW3msg", 'r')
+		updateText = SWfile.read(40)
+		SWfile.close()
 	elif(channel == SW[3]):
 		updateText = ""
 		papi.UpdateText("weather", "--")
