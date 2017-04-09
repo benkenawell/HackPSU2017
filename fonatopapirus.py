@@ -145,7 +145,7 @@ class phone(threading.Thread):
 
 fonaLock = threading.Lock()
 #start serial connection to fona
-fona = Serial('/dev/ttyUSB1', timeout=1)
+fona = Serial('/dev/ttyUSB0', timeout=1)
 lasttxt = ""
 #papi = PapirusTextPos(False)
 #connect to papirus screen

@@ -2,7 +2,7 @@
 
 from serial import Serial
 
-fona = Serial('/dev/ttyUSB1')
+fona = Serial('/dev/ttyUSB0')
 fona.write(b'AT+CBC\n')
 line = fona.readline().strip()
 print(line)
